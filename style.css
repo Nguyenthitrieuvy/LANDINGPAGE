@@ -1,0 +1,594 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+    display: block;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+}
+.header img {
+    width: 150px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    margin: 30px 70px;
+}
+.header .menu > ul > li {
+    display: inline-block;
+    position: relative;
+}
+.header .menu > ul > li > a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+.header .menu li a:hover {
+    color: green;
+}
+.header .menu li .submenu {
+    position: absolute;
+    top: 60px;
+    list-style: none;
+    background-color: white;
+    width: 200px;
+    padding: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 1;
+}
+.header .menu li:hover .submenu {
+    opacity: 1;
+}
+.header .menu li .submenu li {
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.header .menu li .submenu li a {
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.header .menu li .submenu li a:hover {
+    color: green;
+}
+.header .social {
+    margin-left: auto;
+}
+.header .social a {
+    margin: 0 15px;
+    color: black;
+}
+.header .social a i {
+    transition: 0.5s;
+}
+.header .social a:hover i {
+    transform: translateY(-10px);
+}
+.banner .thumb {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+.banner .content {
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    text-align: center;
+}
+.banner .content p {
+    text-transform: uppercase;
+    font-size: 20px;
+    animation: banner 1s;
+}
+.banner .content h1 {
+    font-size: 60px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    animation: banner2 1s;
+}
+.banner .content span {
+    color: green;
+}
+.banner .content button {
+    padding: 10px 25px;
+    position: relative;
+    cursor: pointer;
+}
+.banner .content button::after {
+    content: "";
+    position: absolute;
+    background-color: green;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.banner .content button:hover::after {
+    width: 100%;
+}
+.banner .content button span {
+    z-index: 1;
+    position: relative;
+    color: #000;
+}
+.banner .content button span:hover {
+    color: aliceblue;
+}
+.banner .content {
+    animation: banner2 1s;
+}
+@keyframes banner {
+    from {
+        opacity: 0;
+        transform: translateY(50px) rotate(180deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) rotate(0);
+    }
+}
+@keyframes banner2 {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.album {
+    width: 90%;
+    margin: 0 auto;
+}
+.album .thumb {
+    display: flex;
+}
+.album .thumb .col {
+    width: 15%;
+    margin: 20px 20px;
+    text-align: center;
+}
+.album .thumb .col img {
+    border-radius: 50%;
+}
+.album .thumb .boximg {
+    overflow: hidden;
+    border-radius: 50%;
+}
+.album .col img {
+    transition: 0.5s;
+}
+.album .col img:hover {
+    transform: scale(1.1);
+}
+.album h3 {
+    display: inline-block;
+    padding-top: 10px;
+}
+.album h3::after {
+    content: "";
+    display: block;
+    background-color: green;
+    width: 0;
+    height: 2px;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+.album h3:hover::after {
+    width: 100%;
+}
+.content {
+    text-align: center;
+}
+.content h1 {
+    font-size: 50px;
+    padding-top: 80px;
+}
+.content p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.content button {
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 1px solid gray;
+    position: relative;
+    cursor: pointer;
+}
+.content button::after {
+    content: "";
+    position: absolute;
+    background-color: green;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.content button:hover:after {
+    width: 100%;
+}
+.content button span {
+    z-index: 1;
+    position: relative;
+}
+.content button span:hover {
+    color: white;
+}
+.product {
+    padding-top: 30px;
+    margin-left: 70px;
+    margin-right: 20px;
+}
+.product .list {
+    display: flex;
+}
+.product img {
+    width: 85%;
+}
+.product .list .thumb {
+    position: relative;
+}
+.product .col .sale {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: green;
+    padding: 7px 10px;
+    color: white;
+}
+.product .col h1 {
+    font-size: 18px;
+    transition: 0.5s;
+}
+.product .col h1:hover {
+    color: green;
+}
+.product .card p {
+    padding-top: 15px;
+    color: red;
+}
+.product .col span {
+    text-decoration: line-through;
+    color: gray;
+}
+.product .col .thumb {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.col .thumb::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 50%);
+    top: -100%;
+    transition: 0.5s;
+}
+.col:hover .thumb::before {
+    top: 0;
+}
+.banner2 {
+    background-image: url(img/banner-2.jpg);
+    background-size: cover;
+    padding: 50px 0px;
+    position: relative;
+    color: white;
+    width: 90%;
+    margin: 30px auto;
+    text-align: center;
+}
+.banner2::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.banner2 .hover {
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner2 .hover .icon3 {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: black;
+}
+.banner2 .hover .icon3::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    animation: 1s ease 0s infinite alternate none running loading;
+}
+.banner2 .content1 {
+    position: relative;
+}
+.banner2 h1 {
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+.banner2 p {
+    color: #fff;
+    font-weight: 300;
+    font-size: 16px;
+    width: 50%;
+    margin: 0 auto 20px;
+}
+.banner2 button {
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+}
+.banner2 button::after {
+    content: "";
+    position: absolute;
+    background-color: green;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.banner2 button:hover:after {
+    width: 100%;
+}
+.banner2 button span {
+    z-index: 1;
+    position: relative;
+}
+.banner2 button span:hover {
+    color: white;
+}
+@keyframes loading {
+    100% {
+        transform: scale(1.5);
+    }
+}
+.banner3 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 93%;
+    margin: 0 auto;
+}
+.banner3 .card {
+    width: 33.33%;
+    padding: 0 20px;
+    position: relative;
+}
+.banner3 .card h3 {
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+    bottom: 20px;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    transition: 0.5s;
+}
+.banner3 .card:hover h3 {
+    background-color: rgb(33, 109, 0);
+    color: #fff;
+    bottom: 30px;
+}
+.product2 {
+    display: flex;
+    align-items: center;
+}
+.product2 .album2 img {
+    width: 100%;
+}
+.product2 .album2 {
+    margin-left: 70px;
+}
+.product2 .text {
+    width: 15%;
+    top: 60px;
+    left: 40px;
+    position: relative;
+    animation: text1 5s infinite linear;
+}
+@keyframes text1 {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.product2 .infor {
+    text-align: center;
+    margin-left: 100px;
+}
+.product2 .infor .icon {
+    color: green;
+    font-size: 60px;
+}
+.product2 .infor .icon2 a {
+    text-decoration: none;
+    color: gold;
+    padding-top: 5px;
+}
+.product2 .infor .icon2 span {
+    color: gray;
+}
+.product2 .infor p {
+    padding-top: 25px;
+    font-size: 25px;
+}
+.product2 .infor h2 {
+    padding-top: 25px;
+}
+.picture {
+    display: flex;
+    padding-top: 100px;
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.picture .thumb {
+    position: relative;
+    cursor: pointer;
+}
+.picture .left {
+    width: 48%;
+}
+.picture .right {
+    width: 51%;
+    padding-left: 10px;
+}
+.picture .right .list2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+.picture .right .list2 .col2 {
+    width: 50%;
+    padding: 0 12px 15px;
+}
+.picture .thumb .love {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 50%);
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.picture .thumb:hover .love {
+    opacity: 1;
+}
+.footer {
+    display: flex;
+    padding-top: 100px;
+    margin-bottom: 50px;
+}
+.footer .col {
+    width: 90%;
+    border-right: 1px solid gainsboro;
+    padding: 0 50px;
+}
+.footer .col:last-child {
+    border-right: none;
+}
+.footer .col img {
+    padding-left: 30px;
+    width: 65%;
+    padding-top: 30px;
+}
+.footer .col h2 {
+    font-size: 20px;
+}
+.footer .col p {
+    font-size: 17px;
+    padding-top: 30px;
+    color: dimgrey;
+}
+.footer .col .col1 {
+    margin-left: 70px;
+    padding-top: 30px;
+}
+.footer .col .col1 .social1 ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 25px;
+}
+.footer .col .col1 .social1 ul li {
+    margin-right: 5px;
+    list-style: none;
+}
+.footer .col .col1 .social1 ul li a {
+    width: 40px;
+    height: 40px;
+    display: block;
+    color: green;
+    background-color: rgba(240, 240, 240, 0.884);
+    border-radius: 50%;
+    margin: 0 5px;
+    line-height: 40px;
+    text-align: center;
+    transition: 0.5s;
+}
+.footer .col .col1 .social1 ul li a:hover {
+    background-color: green;
+    color: #fff;
+}
+.footer .col .col1 .name2 {
+    padding-top: 30px;
+    padding-left: 70px;
+}
+.footer .col .col1 .name2 button {
+    padding: 15px 5px;
+    color: gray;
+    background-color: transparent;
+    border: 1px solid gray;
+}
+.footer .col .col1 .name2 button i {
+    color: #000;
+}
+.final {
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    padding: 20px;
+}
+.final .name {
+    margin: 0 50px;
+    color: gray;
+    font-size: 13px;
+}
+.final .menu ul {
+    margin-right: 60px;
+}
+.final .menu li {
+    display: inline-block;
+    font-size: 13px;
+}
+.final .menu ul li a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: gray;
+    transition: 0.5s;
+}
+
+.final .menu li a:hover {
+    color: green;
+}
